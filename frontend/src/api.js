@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:8080'
+  baseURL: 'https://portfolio-mysql.onrender.com'
 });
 
 export const fetchProjects = () => API.get('api/projects');

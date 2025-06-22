@@ -19,7 +19,7 @@ const Projects = () => {
 
   const loadProjects = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/projects');
+      const res = await axios.get('https://portfolio-mysql.onrender.com/api/projects');
       setProjects(res.data);
     } catch (err) {
       console.error('Failed to load projects:', err);
@@ -33,7 +33,7 @@ const Projects = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/api/projects', formData);
+      const res = await axios.post('https://portfolio-mysql.onrender.com/api/projects', formData);
       alert('Project added successfully!');
       setProjects(prev => [...prev, res.data]); 
       setFormData({ title: '', description: '', technologies: '', projectUrl: '' }); 

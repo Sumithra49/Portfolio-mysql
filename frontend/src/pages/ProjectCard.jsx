@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:8080/api/projects/${project.id}`, formData);
+      await axios.put(`https://portfolio-mysql.onrender.com/api/projects/${project.id}`, formData);
       alert('Project updated successfully!');
       setIsEditing(false);
       window.location.reload();
@@ -31,7 +31,7 @@ const ProjectCard = ({ project }) => {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this project?')) {
       try {
-        await axios.delete(`http://localhost:8080/api/projects/${project.id}`);
+        await axios.delete(`https://portfolio-mysql.onrender.com/api/projects/${project.id}`);
         alert(' Project deleted!');
         window.location.reload(); 
       } catch (err){

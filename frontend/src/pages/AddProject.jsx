@@ -16,7 +16,7 @@ const AddProject = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:8080/api/projects', formData);
+      await axios.post('https://portfolio-mysql.onrender.com/api/projects', formData);
       alert('Project added successfully!');
       setFormData({ title: '', description: '', technologies: '', projectUrl: '' });
     } catch (err) {
